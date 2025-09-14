@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "storage account name"
+      },
+      "minLength": 3,
+      "maxLength": 24
+    }
+  },
+  "functions": [],
+  "variables": {},
+  "resources": [
+    {
+      "name": "[parameters('storageAccountName')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2023-05-01",
+      "tags": {
+        "displayName": "aishastorageacc"
+      },
+      "location": "[resourceGroup().location]",
+      "kind": "StorageV2",
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "properties": {}
+    }
+  ],
+   "outputs": {
+    "storageEndpoint": {
+      "type": "string",
+      "value": "[reference(parameters('storageAccountName')).primaryEndpoints.blob]"
+    }
+   }
+}
