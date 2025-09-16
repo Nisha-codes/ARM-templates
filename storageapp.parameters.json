@@ -4,6 +4,15 @@
   "parameters": {
     "storageAccountName": {
       "value": "aishastorageacc123"
+    },
+    "appServicePlanName": {
+      "value": "aishaplan123"
+    },
+    "webAppName": {
+      "value": "aishawebapp123"
+    },
+    "location": {
+      "value": "uksouth"
     }
   }
 }
