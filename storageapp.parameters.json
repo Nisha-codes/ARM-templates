@@ -2,18 +2,13 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "storageAccountName": {
-      "value": "aishastorageacc123"
-    },
-    "appServicePlanName": {
-      "value": "aishaplan123"
-    },
-    "webAppName": {
-      "value": "aishawebapp123"
-    },
-    "location": {
-      "value": "uksouth"
-    }
+    "storageAccountName": { "value": "aishastorageacc123" },
+    "location": { "value": "uksouth" },
+    "appServicePlanName": { "value": "aishaPlan" },
+    "webAppName": { "value": "aishawebapp123" },
+    "sqlAdminLogin": { "value": "sqladmin" },
+    "sqlAdminPassword": { "value": "YourStrongP@ssw0rd!" },
+    "sqlDbName": { "value": "appdb" }
   }
 }
 
